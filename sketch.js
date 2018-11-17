@@ -28,6 +28,10 @@ function draw() {
     image(babe2, 0, 0, windowWidth, windowHeight);
     mySong.stop();
   }
+  textAlign(CENTER);
+  textSize(32);
+  text('Gently shake the baby to sleep!', width/4.5, 50);
+  fill('slategray');
 }
 
 function deviceMoved() {
