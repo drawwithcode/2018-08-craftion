@@ -18,7 +18,8 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  if (value > 200 && value < 100) {
+  value = value - 5;
+  if (value > 200 || value < 100) {
     image(babe, 0, 0, windowWidth, windowHeight);
     if (mySong.isPlaying() == false) {
       mySong.play();
@@ -30,7 +31,7 @@ function draw() {
 }
 
 function deviceMoved() {
-  value = value + 1;
+  value = value + 17;
   if (value > 255) {
     value = 0;
   }
