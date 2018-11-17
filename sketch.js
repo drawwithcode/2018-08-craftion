@@ -19,21 +19,23 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  // if (value>150) {
-  //   image(babe, 0,0,windowWidth,windowHeight);
-  //   // if (mySong.isPlaying() == false) {
-  //   //   mySong.play();
-  //   // }
-  // } else {
-  //
-  //   image(babe2, 0,0,windowWidth,windowHeight);
-  //   // mySong.stop();
-  // }
+  if (value>200 && value<100) {
+    image(babe, 0,0,windowWidth,windowHeight);
+    if (mySong.isPlaying() == false) {
+      mySong.play();
+    }
+  } else {
+
+    image(babe2, 0,0,windowWidth,windowHeight);
+    mySong.stop();
+  }
 
 }
 
-function deviceTurned() {
-  if (turnAxis === 'Z'){
-    mySong.play();
+function deviceMoved() {
+  value = value + 1;
+  if (value > 255) {
+    value = 0;
   }
+
 }
